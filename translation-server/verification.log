@@ -1,0 +1,48 @@
+2026-06-11 19:59:51 - src.server - INFO - Logging initialized at level: INFO
+2026-06-11 19:59:51 - src.server - INFO - Starting MCP Translation Server
+2026-06-11 19:59:51 - src.server - INFO - Creating MCP Translation Server
+2026-06-11 19:59:51 - src.server - INFO - MCP Translation Server created successfully
+2026-06-11 19:59:51 - src.server - INFO - MCP server listening on stdio
+2026-06-11 19:59:51 - src.server - INFO - Server streams established
+2026-06-11 19:59:51 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-06-11 19:59:51 - src.server - INFO - Listed 5 tools
+2026-06-11 19:59:51 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-06-11 19:59:51 - src.server - INFO - Tool execution started: name=check_api_health, arguments={}
+2026-06-11 19:59:51 - src.tools - INFO - Tool called: check_api_health
+2026-06-11 19:59:51 - src.api_client - INFO - API health check: status=200
+2026-06-11 19:59:51 - src.tools - INFO - Tool result: check_api_health | api_available=True
+2026-06-11 19:59:51 - src.server - INFO - Tool execution succeeded: name=check_api_health
+2026-06-11 19:59:51 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-06-11 19:59:51 - src.server - INFO - Tool execution started: name=get_supported_languages, arguments={}
+2026-06-11 19:59:51 - src.tools - INFO - Tool called: get_supported_languages
+2026-06-11 19:59:51 - src.tools - INFO - Tool result: get_supported_languages | count=3, languages=['ENG', 'RUS', 'UKR']
+2026-06-11 19:59:51 - src.server - INFO - Tool execution succeeded: name=get_supported_languages
+2026-06-11 19:59:51 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-06-11 19:59:51 - src.server - INFO - Tool execution started: name=translate_text, arguments={
+  "text": "Hello, world!",
+  "source_lang": "ENG",
+  "target_lang": "RUS"
+}
+2026-06-11 19:59:51 - src.tools - INFO - Tool called: translate_text | text_length=13, source_lang=ENG, target_lang=RUS
+2026-06-11 19:59:52 - src.api_client - INFO - Translation request: text_length=13, lang_pair=eng|rus
+2026-06-11 19:59:52 - src.tools - INFO - Tool result: translate_text | status=success, is_translated=True
+2026-06-11 19:59:52 - src.server - INFO - Tool execution succeeded: name=translate_text
+2026-06-11 19:59:52 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-06-11 19:59:52 - src.server - INFO - Tool execution started: name=translate_with_detection, arguments={
+  "text": "Good morning",
+  "target_lang": "RUS"
+}
+2026-06-11 19:59:52 - src.tools - INFO - Tool called: translate_with_detection | text_length=12, target_lang=RUS
+2026-06-11 19:59:52 - src.api_client - INFO - Language detection: text_length=12, detected=ENG
+2026-06-11 19:59:52 - src.tools - INFO - Detected source language: ENG
+2026-06-11 19:59:52 - src.api_client - INFO - Translation request: text_length=12, lang_pair=eng|rus
+2026-06-11 19:59:52 - src.tools - INFO - Tool result: translate_with_detection | status=success, is_translated=True
+2026-06-11 19:59:52 - src.server - INFO - Tool execution succeeded: name=translate_with_detection
+2026-06-11 19:59:52 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-06-11 19:59:52 - src.server - INFO - Tool execution started: name=detect_language, arguments={
+  "text": "\u041f\u0440\u0438\u0432\u0456\u0442, \u0441\u0432\u0456\u0442"
+}
+2026-06-11 19:59:52 - src.tools - INFO - Tool called: detect_language | text_length=12
+2026-06-11 19:59:52 - src.api_client - INFO - Language detection: text_length=12, detected=UKR
+2026-06-11 19:59:52 - src.tools - INFO - Tool result: detect_language | detected=UKR
+2026-06-11 19:59:52 - src.server - INFO - Tool execution succeeded: name=detect_language

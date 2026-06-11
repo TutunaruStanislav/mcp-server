@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "translation": {
+      "command": "C:\\WORK\\3\\otus\\mcp-local\\translation-server\\venv\\Scripts\\python.exe",
+      "args": [
+        "C:\\WORK\\3\\otus\\mcp-local\\translation-server\\run.py"
+      ],
+      "cwd": "C:\\WORK\\3\\otus\\mcp-local"
+    }
+  }
+}
